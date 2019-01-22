@@ -38,3 +38,13 @@ transaction WalletTransfer {
   --> Wallet to
   o Double amount
 }
+
+transaction TransactionDebit {
+  --> Wallet Wallet
+  o Double amount
+}
+
+transaction TransactionCredit {
+  --> Wallet wallet
+  o Double amount
+}

@@ -2,11 +2,11 @@
   "engines": {
     "composer": "^0.20.6"
   },
-  "name": "nestaway-payments",
-  "version": "0.0.1",
+  "name": "nestaway-payments3",
+  "version": "0.0.3",
   "description": "Payment solution for nestaway",
   "scripts": {
-    "prepublish": "mkdirp ./dist && composer archive create --sourceType dir --sourceName . -a ./dist/nestaway-payments.bna",
+    "prepublish": "mkdirp ./dist && composer archive create --sourceType dir --sourceName . -a ./dist/nestaway-payments@0.0.3.bna",
     "pretest": "npm run lint",
     "lint": "eslint .",
     "test": "nyc mocha -t 0 test/*.js && cucumber-js"
