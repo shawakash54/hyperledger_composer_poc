@@ -1,0 +1,36 @@
+{
+  "engines": {
+    "composer": "^0.20.6"
+  },
+  "name": "nestaway-payments",
+  "version": "0.0.1",
+  "description": "Payment solution for nestaway",
+  "scripts": {
+    "prepublish": "mkdirp ./dist && composer archive create --sourceType dir --sourceName . -a ./dist/nestaway-payments.bna",
+    "pretest": "npm run lint",
+    "lint": "eslint .",
+    "test": "nyc mocha -t 0 test/*.js && cucumber-js"
+  },
+  "keywords": [
+    "composer",
+    "composer-network"
+  ],
+  "author": "Akash Shaw",
+  "email": "shawakash54@gmail.com",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "chai": "latest",
+    "chai-as-promised": "latest",
+    "composer-admin": "^0.20.6",
+    "composer-cli": "^0.20.6",
+    "composer-client": "^0.20.6",
+    "composer-common": "^0.20.6",
+    "composer-connector-embedded": "^0.20.6",
+    "composer-cucumber-steps": "^0.20.6",
+    "cucumber": "^2.2.0",
+    "eslint": "latest",
+    "mkdirp": "latest",
+    "mocha": "latest",
+    "nyc": "latest"
+  }
+}

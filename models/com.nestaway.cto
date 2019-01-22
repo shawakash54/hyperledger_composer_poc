@@ -1,0 +1,40 @@
+namespace com.nestaway
+
+/* DECLARING ALL THE PARTICIPANTS */
+
+abstract participant Entity identified by id {
+  o String id
+  o String email
+}
+
+participant Nestaway extends Entity {}
+
+participant House extends Entity {}
+
+participant Complex extends Entity {}
+
+abstract participant User extends Entity {
+  o String firstName
+  o String lastName
+}
+
+participant Customer extends User {}
+
+participant Owner extends User{}
+
+/* DECLARING THE ASSETS */
+
+asset Wallet identified by accountId {
+  o String accountId
+  --> Entity entity
+  o Double balance
+  o Double dues
+}
+
+/* DECLARING THE TRANSACTIONS */
+
+transaction WalletTransfer {
+  --> Wallet from
+  --> Wallet to
+  o Double amount
+}
